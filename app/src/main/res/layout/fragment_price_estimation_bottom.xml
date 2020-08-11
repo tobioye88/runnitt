@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_curve_top"
+    android:padding="24dp"
+    tools:context=".PriceEstimationBottomFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/from_layout"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24sp"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/pin_form"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:id="@+id/from_header"
+                android:text="FROM"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Adesanya" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:id="@+id/to_layout"
+        android:layout_below="@id/from_layout">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24sp"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/pin_to"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:id="@+id/to_header"
+                android:text="TO"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Lekki" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:id="@+id/price_layout"
+        android:layout_below="@id/to_layout">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24sp"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/wallet"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:id="@+id/price_header"
+                android:text="PRICE"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="NGN 1,200 - 2,200" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:id="@+id/recipient_layout"
+        android:visibility="gone"
+        android:layout_below="@id/price_layout">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24sp"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/user"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:id="@+id/recipient_header"
+                android:text="TOSIN ADEGBESAN"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="08034006567" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/btSelectRecipient"
+        android:layout_below="@id/recipient_layout"
+        style="@style/customButton"
+        android:text="Select Recipient"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/btSelectRecipient"
+        style="@style/customButton"
+        android:visibility="gone"
+        android:id="@+id/btConfirm"
+        android:text="Confirm"/>
+
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="@drawable/bg_curve_top"
+    android:clickable="true"
+    tools:context=".FoundRiderBottomFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RIDER"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvRidersName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ali Mustapha"
+            android:textColor="#000000"
+            app:layout_constraintLeft_toLeftOf="@id/header"
+            app:layout_constraintStart_toStartOf="@+id/header"
+            app:layout_constraintTop_toBottomOf="@+id/header" />
+
+        <TextView
+            android:id="@+id/tvPlateNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LSD 454 JA - LAGOS"
+            android:textSize="10sp"
+            app:layout_constraintLeft_toLeftOf="@id/tvRidersName"
+            app:layout_constraintTop_toBottomOf="@+id/tvRidersName" />
+
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24sp"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentBottom="false"
+            android:src="@drawable/ic_phone"
+            app:layout_constraintBottom_toBottomOf="@+id/tvPlateNumber"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/tvRidersName"
+            app:layout_constraintTop_toTopOf="@+id/header" />
+
+        <Button
+            style="@style/customButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="84dp"
+            android:text="Cancel"
+            app:layout_constraintTop_toBottomOf="@+id/tvPlateNumber"
+            tools:layout_editor_absoluteX="0dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>
